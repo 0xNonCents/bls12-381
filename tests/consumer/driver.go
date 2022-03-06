@@ -72,7 +72,7 @@ func main() {
 
 	var g = bls.NewG2()
 	msg_hashed := Message(payload.currRound, payload.prevSig)
-	domain := []byte("BLS12381G2_XMD:SHA-256_SSWU_NU_TESTGEN")
+	domain := []byte("BLS12381G2_XMD:SHA-256_SSWU_RO_")
 	msg_on_curve, err_msg := g.EncodeToCurve(msg_hashed, domain)
 
 	if err_msg != nil {
